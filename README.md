@@ -25,12 +25,23 @@ Android 10 / AOSP 10 (API 29)용 **한글·영문 QWERTY 소프트웨어 키보�
 
 ---
 
+## 스크린샷
+
+| | |
+|:--:|:--:|
+| ![영문 QWERTY](img/2.png)<br>영문 QWERTY | ![한글 두벌식](img/3.png)<br>한글 두벌식 |
+| ![숫자·기호 (?123)](img/4.png)<br>숫자·기호 (`?123`) | ![추가 기호 (#+=)](img/5.png)<br>추가 기호 (`#+=`) |
+| ![숫자 키패드](img/1.png)<br>숫자 키패드 (NUMBER) | |
+
+---
+
 ## 저장소 구조
 
 ```
 android_hg_korean_kb/
 ├── README.md
 ├── .gitignore
+├── img/                       # 키보드 스크린샷
 └── source/
     └── hg_korean_kb/          # IME 모듈 본체
         ├── Android.bp         # AOSP Soong
