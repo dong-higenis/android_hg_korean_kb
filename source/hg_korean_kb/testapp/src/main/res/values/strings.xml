@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HG Keyboard Test</string>
+    <string name="header_title">HG Keyboard Test</string>
+    <string name="header_subtitle">Tap each field and verify HG Keyboard layouts / Hangul / Number / Phone.</string>
+
+    <string name="label_text">1. text</string>
+    <string name="hint_text">General text</string>
+
+    <string name="label_text_multiline">2. textMultiLine</string>
+    <string name="hint_text_multiline">Multiline text (Enter = newline)</string>
+
+    <string name="label_number">3. number</string>
+    <string name="hint_number">Integer number</string>
+
+    <string name="label_number_decimal">4. numberDecimal</string>
+    <string name="hint_number_decimal">Decimal number</string>
+
+    <string name="label_number_signed">5. numberSigned</string>
+    <string name="hint_number_signed">Signed integer</string>
+
+    <string name="label_number_signed_decimal">6. numberSigned|numberDecimal</string>
+    <string name="hint_number_signed_decimal">Signed decimal</string>
+
+    <string name="label_phone">7. phone</string>
+    <string name="hint_phone">Phone digits * #</string>
+
+    <string name="label_email">8. textEmailAddress</string>
+    <string name="hint_email">email@example.com</string>
+
+    <string name="label_url">9. textUri</string>
+    <string name="hint_url">https://example.com</string>
+
+    <string name="label_password">10. textPassword</string>
+    <string name="hint_password">Password text</string>
+
+    <string name="label_number_password">11. numberPassword</string>
+    <string name="hint_number_password">Number password</string>
+</resources>

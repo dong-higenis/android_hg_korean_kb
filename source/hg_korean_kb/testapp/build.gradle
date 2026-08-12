@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+
+    namespace 'com.higenis.keyboard.test'
+
+    defaultConfig {
+        applicationId "com.higenis.keyboard.test"
+        minSdkVersion 29
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+// No AndroidX / Compose / third-party libraries.
+dependencies {
+}

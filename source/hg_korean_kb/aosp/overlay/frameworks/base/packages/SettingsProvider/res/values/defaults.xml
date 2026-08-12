@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  HG Keyboard — default IME overlay for SettingsProvider (Android 10 OEM).
+
+  IMPORTANT:
+  Resource *names* differ by BSP. Before using this file, search your tree:
+
+    rg -n "def_.*input_method|enabled_input_methods" \
+      frameworks/base/packages/SettingsProvider
+
+  Then keep ONLY the names that exist (and are loaded) in YOUR SettingsProvider.
+  Common Allwinner / OEM Android 10 pairs:
+
+    def_default_input_method  +  def_enabled_input_methods
+    def_input_method          +  def_enabled_input_methods
+
+  IME ID:
+    com.higenis.keyboard/.HGKeyboardService
+
+  enabled list: colon-separated IME IDs. Keep LatinIME as fallback if desired.
+-->
+<resources>
+    <!-- Selected / default IME -->
+    <string name="def_default_input_method" translatable="false">com.higenis.keyboard/.HGKeyboardService</string>
+    <string name="def_input_method" translatable="false">com.higenis.keyboard/.HGKeyboardService</string>
+
+    <!-- Enabled IMEs (HGKeyboard first; LatinIME optional fallback) -->
+    <string name="def_enabled_input_methods" translatable="false">com.higenis.keyboard/.HGKeyboardService:com.android.inputmethod.latin/.LatinIME</string>
+</resources>

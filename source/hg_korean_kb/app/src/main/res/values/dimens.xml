@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Overall keyboard height (5 letter rows incl. number row; clamped in onMeasure). -->
+    <dimen name="keyboard_height">300dp</dimen>
+    <dimen name="keyboard_min_height">220dp</dimen>
+    <dimen name="keyboard_max_height">360dp</dimen>
+
+    <dimen name="keyboard_padding_horizontal">4dp</dimen>
+    <dimen name="keyboard_padding_vertical">6dp</dimen>
+
+    <dimen name="key_horizontal_gap">4dp</dimen>
+    <dimen name="key_vertical_gap">6dp</dimen>
+    <dimen name="key_corner_radius">6dp</dimen>
+
+    <dimen name="key_label_text_size">20sp</dimen>
+    <!-- ?123 / 한/영 / ABC 등 짧은 텍스트 action -->
+    <dimen name="key_action_label_text_size">16sp</dimen>
+    <!-- ↵ ⌫ ⇧ ▼ 등 기호 action (동일 sp라도 글리프가 작아 보여 별도 크기) -->
+    <dimen name="key_icon_action_label_text_size">24sp</dimen>
+</resources>

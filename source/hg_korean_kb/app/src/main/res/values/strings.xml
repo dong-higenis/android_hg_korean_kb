@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Launcher / package label (Settings app list, etc.) -->
+    <string name="app_name">HG Keyboard</string>
+
+    <!-- Label shown for the IME service in Languages &amp; input -->
+    <string name="ime_name">HG Keyboard</string>
+
+    <!--
+      Single subtype label. Do not split into "Korean" / "English" subtypes;
+      language mode is toggled inside the IME (한/영).
+    -->
+    <string name="subtype_label">한국어/English</string>
+
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light keyboard theme (Material-inspired, not a Gboard asset copy). -->
+    <color name="keyboard_background">#FFE8EAED</color>
+
+    <color name="key_background">#FFFFFFFF</color>
+    <color name="key_action_background">#FFDADCE0</color>
+    <color name="key_pressed_background">#FFBDC1C6</color>
+    <!-- Shift ONCE / Caps Lock LOCKED highlight -->
+    <color name="key_shift_active_background">#FFAECBFA</color>
+
+    <color name="key_label">#FF202124</color>
+    <color name="key_action_label">#FF3C4043</color>
+</resources>

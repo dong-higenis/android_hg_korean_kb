@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Host app for validating HG Keyboard across EditorInfo.inputType values.
+  Separate package from the IME (com.higenis.keyboard).
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.higenis.keyboard.test">
+
+    <uses-sdk
+        android:minSdkVersion="29"
+        android:targetSdkVersion="29" />
+
+    <application
+        android:label="@string/app_name"
+        android:allowBackup="false"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Material.Light.DarkActionBar">
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

@@ -1,0 +1,24 @@
+// HG Keyboard — root Gradle build (APK validation only).
+// No AndroidX / Compose / third-party libraries.
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Compatible with JDK 17; project still disables AndroidX in gradle.properties.
+        classpath 'com.android.tools.build:gradle:7.4.2'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

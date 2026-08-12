@@ -1,0 +1,29 @@
+// HG Keyboard — Android 10 AOSP (API 29) Soong module
+// Tree path: packages/inputmethods/HGKeyboard/
+//
+// Sources are shared with the Gradle APK layout under app/src/main/.
+// Gradle does not use this file; Soong does not use build.gradle.
+//
+// Integration:
+//   PRODUCT_PACKAGES += HGKeyboard
+//
+// Notes:
+// - sdk_version: "current" → public SDK of the platform being built (API 29 on AOSP 10).
+// - No platform_apis / privileged / certificate:"platform" (public IME APIs only).
+// - No AndroidX / external static_libs.
+// - Host unit tests live under tests/ and are NOT listed in srcs.
+
+android_app {
+    name: "HGKeyboard",
+
+    // Production sources only (Gradle app/src/main tree).
+    srcs: ["app/src/main/java/com/higenis/keyboard/**/*.java"],
+
+    resource_dirs: ["app/src/main/res"],
+
+    manifest: "app/src/main/AndroidManifest.xml",
+
+    sdk_version: "current",
+
+    // Normal system app via PRODUCT_PACKAGES → typically /system/app/HGKeyboard.
+}

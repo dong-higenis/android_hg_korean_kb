@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_padding">12dp</dimen>
+    <dimen name="section_spacing">14dp</dimen>
+    <dimen name="label_to_field">4dp</dimen>
+    <dimen name="header_bottom">10dp</dimen>
+    <dimen name="multiline_min_height">96dp</dimen>
+</resources>

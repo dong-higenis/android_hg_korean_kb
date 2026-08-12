@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="@dimen/screen_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="48dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/header_title"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#FF202124" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="@dimen/header_bottom"
+            android:text="@string/header_subtitle"
+            android:textSize="13sp"
+            android:textColor="#FF5F6368" />
+
+        <!-- 1. text -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="@string/label_text"
+            android:textStyle="bold"
+            android:textColor="#FF3C4043" />
+        <EditText
+            android:id="@+id/field_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/label_to_field"
+            android:hint="@string/hint_text"
+            android:inputType="text"
+            android:importantForAutofill="no" />
+
+        <!-- 2. textMultiLine -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="@string/label_text_multiline"
+            android:textStyle="bold"
+            android:textColor="#FF3C4043" />
+        <EditText
+            android:id="@+id/field_text_multiline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/label_to_field"
+            android:minHeight="@dimen/multiline_min_height"
+            android:gravity="top|start"
+            android:hint="@string/hint_text_multiline"
+            android:inputType="textMultiLine"
+            android:importantForAutofill="no" />
+
+        <!-- 3. number -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="@string/label_number"
+            android:textStyle="bold"
+            android:textColor="#FF3C4043" />
+        <EditText
+            android:id="@+id/field_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/label_to_field"
+            android:hint="@string/hint_number"
+            android:inputType="number"
+            android:importantForAutofill="no" />
+
+        <!-- 4. numberDecimal -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="@string/label_number_decimal"
+            android:textStyle="bold"
+            android:textColor="#FF3C4043" />
+        <EditText
+            android:id="@+id/field_number_decimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/label_to_field"
+            android:hint="@string/hint_number_decimal"
+            android:inputType="numberDecimal"
+            android:importantForAutofill="no" />
+
+        <!-- 5. numberSigned -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="@string/label_number_signed"
+            android:textStyle="bold"
+            android:textColor="#FF3C4043" />
+        <EditText
+            android:id="@+id/field_number_signed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/label_to_field"
+            android:hint="@string/hint_number_signed"
+            android:inputType="numberSigned"
+            android:importantForAutofill="no" />
+
+        <!-- 6. numberSigned|numberDecimal -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="@string/label_number_signed_decimal"
+            android:textStyle="bold"
+            android:textColor="#FF3C4043" />
+        <EditText
+            android:id="@+id/field_number_signed_decimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/label_to_field"
+            android:hint="@string/hint_number_signed_decimal"
+            android:inputType="numberSigned|numberDecimal"
+            android:importantForAutofill="no" />
+
+        <!-- 7. phone -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="@string/label_phone"
+            android:textStyle="bold"
+            android:textColor="#FF3C4043" />
+        <EditText
+            android:id="@+id/field_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/label_to_field"
+            android:hint="@string/hint_phone"
+            android:inputType="phone"
+            android:importantForAutofill="no" />
+
+        <!-- 8. textEmailAddress -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="@string/label_email"
+            android:textStyle="bold"
+            android:textColor="#FF3C4043" />
+        <EditText
+            android:id="@+id/field_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/label_to_field"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:importantForAutofill="no" />
+
+        <!-- 9. textUri -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="@string/label_url"
+            android:textStyle="bold"
+            android:textColor="#FF3C4043" />
+        <EditText
+            android:id="@+id/field_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/label_to_field"
+            android:hint="@string/hint_url"
+            android:inputType="textUri"
+            android:importantForAutofill="no" />
+
+        <!-- 10. textPassword -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="@string/label_password"
+            android:textStyle="bold"
+            android:textColor="#FF3C4043" />
+        <EditText
+            android:id="@+id/field_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/label_to_field"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:importantForAutofill="no" />
+
+        <!-- 11. numberPassword -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="@string/label_number_password"
+            android:textStyle="bold"
+            android:textColor="#FF3C4043" />
+        <EditText
+            android:id="@+id/field_number_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/label_to_field"
+            android:hint="@string/hint_number_password"
+            android:inputType="numberPassword"
+            android:importantForAutofill="no" />
+
+    </LinearLayout>
+</ScrollView>

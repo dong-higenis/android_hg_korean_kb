@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  IME subtype definition for HG Keyboard.
+
+  Language-switch policy (important):
+  - Korean / English switching is handled INSIDE the keyboard via the 한/영 key
+    and SharedPreferences (see product requirements).
+  - Therefore this file declares a SINGLE subtype only.
+  - Declaring separate ko / en subtypes would expose a second language switch
+    path (system subtype switcher / globe), which can desync from the in-IME
+    한/영 state. That conflict is intentionally avoided here.
+
+  Locale is ko_KR because the product primary language is Korean; English is
+  still fully available through the internal layout switch.
+  isAsciiCapable=true tells the framework this IME can enter Latin letters
+  (needed for password / ASCII-capable field heuristics).
+-->
+<input-method xmlns:android="http://schemas.android.com/apk/res/android"
+    android:supportsSwitchingToNextInputMethod="true">
+
+    <subtype
+        android:label="@string/subtype_label"
+        android:imeSubtypeLocale="ko_KR"
+        android:imeSubtypeMode="keyboard"
+        android:isAsciiCapable="true" />
+</input-method>
