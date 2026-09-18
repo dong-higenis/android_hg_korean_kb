@@ -22,55 +22,42 @@ public final class NumberLayouts {
     private NumberLayouts() {
     }
 
+    /**
+     * @param signed  show {@code -} (TYPE_NUMBER_FLAG_SIGNED)
+     * @param decimal kept for callers; {@code .} is always shown on the number pad
+     */
     public static List<List<KeyModel>> getNumberLayout(boolean signed, boolean decimal) {
-        if (signed && decimal) {
-            return NUMBER_SIGNED_DECIMAL;
-        }
+        // Decimal point is always available (matches NUMBER keypad UX / screenshots).
         if (signed) {
             return NUMBER_SIGNED;
         }
-        if (decimal) {
-            return NUMBER_DECIMAL;
-        }
-        return NUMBER_INTEGER;
+        return NUMBER_UNSIGNED;
     }
 
     public static List<List<KeyModel>> getPhoneLayout() {
         return PHONE;
     }
 
-    private static final List<List<KeyModel>> NUMBER_INTEGER = buildNumber(false, false);
-    private static final List<List<KeyModel>> NUMBER_DECIMAL = buildNumber(false, true);
-    private static final List<List<KeyModel>> NUMBER_SIGNED = buildNumber(true, false);
-    private static final List<List<KeyModel>> NUMBER_SIGNED_DECIMAL = buildNumber(true, true);
+    private static final List<List<KeyModel>> NUMBER_UNSIGNED = buildNumber(false);
+    private static final List<List<KeyModel>> NUMBER_SIGNED = buildNumber(true);
     private static final List<List<KeyModel>> PHONE = buildPhone();
 
-    private static List<List<KeyModel>> buildNumber(boolean signed, boolean decimal) {
+    private static List<List<KeyModel>> buildNumber(boolean signed) {
         List<List<KeyModel>> rows = new ArrayList<List<KeyModel>>(5);
 
         rows.add(row(ch('1'), ch('2'), ch('3')));
         rows.add(row(ch('4'), ch('5'), ch('6')));
         rows.add(row(ch('7'), ch('8'), ch('9')));
 
-        if (signed && decimal) {
+        if (signed) {
             // - 0 .
             // ⌫ ↵ ▼
             rows.add(row(ch('-'), ch('0'), ch('.')));
             rows.add(row(backspace(), enter(), hide()));
-        } else if (signed) {
-            // - 0 ⌫
-            // [  ↵  ] ▼
-            rows.add(row(ch('-'), ch('0'), backspace()));
-            rows.add(row(enterWide(), hide()));
-        } else if (decimal) {
+        } else {
             // . 0 ⌫
             // [  ↵  ] ▼
             rows.add(row(ch('.'), ch('0'), backspace()));
-            rows.add(row(enterWide(), hide()));
-        } else {
-            // (빈) 0 ⌫
-            // [  ↵  ] ▼
-            rows.add(row(spacer(), ch('0'), backspace()));
             rows.add(row(enterWide(), hide()));
         }
 
@@ -105,10 +92,6 @@ public final class NumberLayouts {
     private static KeyModel hide() {
         // Must use NORMAL (1.0), not KeyWeights.HIDE, or the 3-col grid drifts.
         return KeyModel.action(KeyCodes.HIDE_KEYBOARD, "\u25BC", KeyWeights.NORMAL);
-    }
-
-    private static KeyModel spacer() {
-        return KeyModel.spacer(KeyWeights.NORMAL);
     }
 
     private static KeyModel ch(char c) {

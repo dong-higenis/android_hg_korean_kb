@@ -52,7 +52,7 @@ public final class KeyboardLayout {
             case SYMBOLS_2:
                 return SymbolLayouts.symbols2();
             case NUMBER:
-                return NumberLayouts.getNumberLayout(false, false);
+                return NumberLayouts.getNumberLayout(false, true);
             case PHONE:
                 return NumberLayouts.getPhoneLayout();
             default:
